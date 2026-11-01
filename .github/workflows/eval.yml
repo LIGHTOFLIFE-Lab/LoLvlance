@@ -51,5 +51,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
+          # Keep diagnostics briefly instead of the 90-day default.
+          retention-days: 7
           name: ml-eval-report
           path: ml/eval/latest_report.json
